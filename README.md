@@ -236,20 +236,31 @@ Role-Based Access
 
 # 🖼️ Screenshots
 
+# 🖼️ Screenshots
+
 ## Home Page
-(Add Screenshot)
+![Home](docs/screenshots/home.png)
 
 ## Student Dashboard
-(Add Screenshot)
-
-## Admin Dashboard
-(Add Screenshot)
+![Student Dashboard](docs/screenshots/student-dashboard.png)
 
 ## Campus Navigation
-(Add Screenshot)
+![Navigation](docs/screenshots/navigation.png)
 
 ## Google Maps Integration
-(Add Screenshot)
+![Google Maps](docs/screenshots/google-maps.png)
+
+## Student Profile
+![Profile](docs/screenshots/profile.png)
+
+## Events
+![Events](docs/screenshots/events.png)
+
+## Attendance
+![Attendance](docs/screenshots/attendance.png)
+
+## Admin Dashboard
+![Admin Dashboard](docs/screenshots/admin-dashboard.png)
 
 ---
 
@@ -346,9 +357,6 @@ Through this project, I gained hands-on experience in:
 # 👨‍💻 Author
 
 **Mohammed Salman**
-
-B.Tech CSE Student  
-Aspiring Full Stack Developer | MERN Stack Developer
 
 GitHub:
 https://github.com/MohammedSalman7
