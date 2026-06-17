@@ -236,7 +236,6 @@ Role-Based Access
 
 # 🖼️ Screenshots
 
-# 🖼️ Screenshots
 
 ## Home Page
 ![Home](docs/screenshots/home.png)
@@ -245,7 +244,7 @@ Role-Based Access
 ![Student Dashboard](docs/screenshots/student-dashboard.png)
 
 ## Campus Navigation
-![Navigation](docs/screenshots/navigation.png)
+![Navigation](docs/screenshots/campus-navigation.png)
 
 ## Google Maps Integration
 ![Google Maps](docs/screenshots/google-maps.png)
@@ -260,7 +259,7 @@ Role-Based Access
 ![Attendance](docs/screenshots/attendance.png)
 
 ## Admin Dashboard
-![Admin Dashboard](docs/screenshots/admin-dashboard.png)
+![Admin Dashboard](docs/screenshots/admin-dashboard-page.png)
 
 ---
 
