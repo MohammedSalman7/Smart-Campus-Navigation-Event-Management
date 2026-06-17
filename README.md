@@ -191,9 +191,9 @@ JWT_SECRET=YourSecretKey
 
 **Mohammed Salman**
 
-GitHub:  
-:contentReference[oaicite:0]{index=0}
+GitHub:
+https://github.com/MohammedSalman7
 
 ---
 
-⭐ If you like this project, please give it a star on GitHub!
+# ⭐ If you like this project, please give it a star on GitHub!
