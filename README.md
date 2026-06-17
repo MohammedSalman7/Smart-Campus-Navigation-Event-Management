@@ -6,7 +6,7 @@ A full-stack MERN application that helps students navigate their campus, registe
 
 ## 📌 Project Overview
 
-The Smart Campus Navigation & Event Management System is designed to simplify campus activities by combining:
+The Smart Campus Navigation & Event Management System simplifies campus activities by combining:
 
 - 🗺️ Campus Navigation using Google Maps
 - 🎉 Event Registration and Management
@@ -22,75 +22,27 @@ The Smart Campus Navigation & Event Management System is designed to simplify ca
 
 ## 👨‍🎓 Student Features
 
-### 🔐 Authentication
-- Student Registration
-- Student Login
-- JWT Authentication
-- Protected Routes
-- Logout Functionality
-
-### 🗺️ Campus Navigation
-- View Campus Buildings
-- View Building Codes
-- View Departments in Buildings
-- Google Maps Integration
-- Navigate to Building Location
-
-### 🎉 Event Management
-- View Events
-- Register for Events
-- View Registered Events
-
-### 📋 Attendance
-- View Attendance Percentage
-- View Attendance Records
-
-### 🔔 Notifications
-- Receive Admin Notifications
-
-### 👤 Profile
-- View Profile Information
-- View Name, Email, and Role
-
----
+- 🔐 Student Registration & Login
+- 🗺️ Campus Navigation with Google Maps
+- 🎉 Event Registration and Management
+- 📋 Attendance Tracking
+- 🔔 Notifications
+- 👤 Profile Management
 
 ## 👨‍💼 Admin Features
 
-### 🔐 Authentication
-- Admin Login
-- Role-Based Authorization
-- Protected Admin Routes
-
-### 🏢 Building Management
-- Add Buildings
-- Update Buildings
-- Delete Buildings
-- View Buildings
-
-### 🎉 Event Management
-- Create Events
-- Update Events
-- Delete Events
-- View Events
-
-### 📋 Attendance Management
-- View Attendance Records
-- Manage Student Attendance
-
-### 🔔 Notification Management
-- Send Notifications to Students
-
-### 📊 Dashboard
-- Total Buildings
-- Total Students
-- Total Events
-- Attendance Records
+- 🔐 Admin Authentication
+- 🏢 Building Management
+- 🎉 Event Management
+- 📋 Attendance Management
+- 🔔 Notification Management
+- 📊 Dashboard Analytics
 
 ---
 
 # 🛠️ Tech Stack
 
-## Frontend
+### Frontend
 - React.js
 - Vite
 - React Router DOM
@@ -98,20 +50,20 @@ The Smart Campus Navigation & Event Management System is designed to simplify ca
 - Axios
 - Tailwind CSS
 
-## Backend
+### Backend
 - Node.js
 - Express.js
 - JWT Authentication
 - REST API
 
-## Database
+### Database
 - MongoDB
 - Mongoose
 
-## Third-Party Services
-- Google Maps
+### Third-Party Services
+- Google Maps API
 
-## Version Control
+### Version Control
 - Git
 - GitHub
 
@@ -123,29 +75,7 @@ The Smart Campus Navigation & Event Management System is designed to simplify ca
 Smart-Campus-Navigation-Event-Management
 │
 ├── client
-│   ├── public
-│   └── src
-│       ├── components
-│       ├── context
-│       ├── hooks
-│       ├── pages
-│       │   ├── admin
-│       │   ├── auth
-│       │   └── student
-│       ├── routes
-│       ├── services
-│       └── utils
-│
 ├── server
-│   ├── src
-│   │   ├── config
-│   │   ├── controllers
-│   │   ├── middleware
-│   │   ├── models
-│   │   ├── routes
-│   │   └── utils
-│   └── package.json
-│
 ├── docs
 ├── .gitignore
 └── README.md
@@ -153,112 +83,30 @@ Smart-Campus-Navigation-Event-Management
 
 ---
 
-# 🗄️ Database Models
-
-## User
-- Name
-- Email
-- Password
-- Role
-
-## Building
-- Name
-- Code
-- Description
-- Latitude
-- Longitude
-- Departments
-
-## Event
-- Title
-- Description
-- Venue
-- Date
-- Category
-
-## Attendance
-- Student
-- Event
-- Status
-
-## Notification
-- Title
-- Message
-- CreatedAt
-
----
-
-# 🔐 Authentication Flow
-
-```text
-Register
-     ↓
-Login
-     ↓
-JWT Token Generated
-     ↓
-Token Stored in Local Storage
-     ↓
-Protected Routes
-     ↓
-Role-Based Access
-```
-
----
-
-# 🌐 API Modules
-
-## Authentication APIs
-- Register User
-- Login User
-
-## Building APIs
-- Get Buildings
-- Create Building
-- Update Building
-- Delete Building
-
-## Event APIs
-- Get Events
-- Create Event
-- Update Event
-- Delete Event
-
-## Attendance APIs
-- Get Attendance
-- Create Attendance
-
-## Notification APIs
-- Get Notifications
-- Create Notifications
-
----
-
 # 🖼️ Screenshots
 
-
-## Home Page
+## 🏠 Home Page
 ![Home](docs/screenshots/home.png)
 
-## Student Dashboard
+## 📊 Student Dashboard
 ![Student Dashboard](docs/screenshots/student-dashboard.png)
 
-## Campus Navigation
-![Navigation](docs/screenshots/campus-navigation.png)
+## 🗺️ Campus Navigation
+![Campus Navigation](docs/screenshots/campus-navigation.png)
 
-## Google Maps Integration
+## 🌍 Google Maps Integration
 ![Google Maps](docs/screenshots/google-maps.png)
 
-## Student Profile
+## 👤 Student Profile
 ![Profile](docs/screenshots/profile.png)
 
-## Events
+## 🎉 Events
 ![Events](docs/screenshots/events.png)
 
-## Attendance
+## 📋 Attendance
 ![Attendance](docs/screenshots/attendance.png)
 
-## Admin Dashboard
+## 👨‍💼 Admin Dashboard
 ![Admin Dashboard](docs/screenshots/admin-dashboard-page.png)
 
 ---
@@ -270,8 +118,6 @@ Role-Based Access
 ```bash
 git clone https://github.com/MohammedSalman7/Smart-Campus-Navigation-Event-Management.git
 ```
-
----
 
 ## Frontend Setup
 
@@ -286,8 +132,6 @@ Frontend runs on:
 ```bash
 http://localhost:5173
 ```
-
----
 
 ## Backend Setup
 
@@ -323,33 +167,23 @@ JWT_SECRET=YourSecretKey
 
 ---
 
-# 🚀 Future Enhancements
+# 🌐 Live Demo
 
-- QR-Based Attendance System
-- Event Recommendation System
-- AI Chatbot for Campus Assistance
-- Real-Time Notifications
-- Email Notifications
-- Campus Analytics Dashboard
-- Dark Mode
-- Mobile Application
+**Frontend:** Coming Soon
+
+**Backend API:** Coming Soon
+
+*(Update these links after deployment on Vercel and Render.)*
 
 ---
 
-# 📚 Learning Outcomes
+# 🚀 Future Enhancements
 
-Through this project, I gained hands-on experience in:
-
-- Full Stack MERN Development
-- REST API Development
-- JWT Authentication
-- Role-Based Authorization
-- React Context API
-- MongoDB Schema Design
-- Google Maps Integration
-- Git & GitHub
-- Project Deployment
-- Building Scalable Applications
+- QR-Based Attendance System
+- AI Chatbot for Campus Assistance
+- Real-Time Notifications
+- Email Notifications
+- Mobile Application
 
 ---
 
@@ -357,9 +191,9 @@ Through this project, I gained hands-on experience in:
 
 **Mohammed Salman**
 
-GitHub:
-https://github.com/MohammedSalman7
+GitHub:  
+:contentReference[oaicite:0]{index=0}
 
 ---
 
-# ⭐ If you like this project, please give it a star on GitHub!
+⭐ If you like this project, please give it a star on GitHub!
