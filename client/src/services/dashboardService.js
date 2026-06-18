@@ -1,7 +1,4 @@
-import axios from "axios";
-
-const API =
-  "http://localhost:5000/api";
+import axiosInstance from "./axiosInstance";
 
 const getAuthConfig = () => {
   const user = JSON.parse(
@@ -10,7 +7,7 @@ const getAuthConfig = () => {
 
   return {
     headers: {
-      Authorization: `Bearer ${user.token}`,
+      Authorization: `Bearer ${user?.token}`,
     },
   };
 };
@@ -19,8 +16,8 @@ const getAuthConfig = () => {
 export const getMyEvents =
   async () => {
     const response =
-      await axios.get(
-        `${API}/events/my-events`,
+      await axiosInstance.get(
+        "/events/my-events",
         getAuthConfig()
       );
 
@@ -31,8 +28,8 @@ export const getMyEvents =
 export const getFavorites =
   async () => {
     const response =
-      await axios.get(
-        `${API}/favorites`,
+      await axiosInstance.get(
+        "/favorites",
         getAuthConfig()
       );
 
@@ -43,8 +40,8 @@ export const getFavorites =
 export const getNotifications =
   async () => {
     const response =
-      await axios.get(
-        `${API}/notifications`,
+      await axiosInstance.get(
+        "/notifications",
         getAuthConfig()
       );
 
@@ -55,8 +52,8 @@ export const getNotifications =
 export const getAttendance =
   async (studentId) => {
     const response =
-      await axios.get(
-        `${API}/attendance/student/${studentId}`,
+      await axiosInstance.get(
+        `/attendance/student/${studentId}`,
         getAuthConfig()
       );
 

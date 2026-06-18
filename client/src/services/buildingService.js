@@ -1,7 +1,4 @@
-import axios from "axios";
-
-const API =
-  "http://localhost:5000/api/buildings";
+import axiosInstance from "./axiosInstance";
 
 const getAuthConfig = () => {
   const user = JSON.parse(
@@ -10,7 +7,7 @@ const getAuthConfig = () => {
 
   return {
     headers: {
-      Authorization: `Bearer ${user.token}`,
+      Authorization: `Bearer ${user?.token}`,
     },
   };
 };
@@ -18,8 +15,8 @@ const getAuthConfig = () => {
 export const getBuildings =
   async () => {
     const response =
-      await axios.get(
-        API,
+      await axiosInstance.get(
+        "/buildings",
         getAuthConfig()
       );
 

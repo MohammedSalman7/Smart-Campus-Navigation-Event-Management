@@ -1,7 +1,4 @@
-import axios from "axios";
-
-const API =
-  "http://localhost:5000/api";
+import axiosInstance from "./axiosInstance";
 
 const getAuthConfig = () => {
   const user = JSON.parse(
@@ -10,7 +7,7 @@ const getAuthConfig = () => {
 
   return {
     headers: {
-      Authorization: `Bearer ${user.token}`,
+      Authorization: `Bearer ${user?.token}`,
     },
   };
 };
@@ -19,8 +16,8 @@ const getAuthConfig = () => {
 export const getBuildings =
   async () => {
     const response =
-      await axios.get(
-        `${API}/buildings`,
+      await axiosInstance.get(
+        "/buildings",
         getAuthConfig()
       );
 
@@ -31,8 +28,8 @@ export const getBuildings =
 export const getEvents =
   async () => {
     const response =
-      await axios.get(
-        `${API}/events`,
+      await axiosInstance.get(
+        "/events",
         getAuthConfig()
       );
 
@@ -43,8 +40,8 @@ export const getEvents =
 export const getAttendanceRecords =
   async () => {
     const response =
-      await axios.get(
-        `${API}/attendance`,
+      await axiosInstance.get(
+        "/attendance",
         getAuthConfig()
       );
 
