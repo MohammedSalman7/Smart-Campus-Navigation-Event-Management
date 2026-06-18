@@ -11,10 +11,15 @@ const notificationRoutes = require(
 const authRoutes = require("./routes/authRoutes");
 const buildingRoutes = require("./routes/buildingRoutes");
 const favoriteRoutes = require("./routes/favoriteRoutes");
+
 const app = express();
 
 // Middleware
-app.use(cors());
+app.use(
+  cors({
+    origin: "*",
+  })
+);
 app.use(express.json());
 
 // Test Route

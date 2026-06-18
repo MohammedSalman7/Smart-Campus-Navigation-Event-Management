@@ -7,55 +7,93 @@ const getAuthConfig = () => {
 
   return {
     headers: {
-      Authorization: `Bearer ${user?.token}`,
+      Authorization: user?.token
+        ? `Bearer ${user.token}`
+        : "",
     },
   };
 };
 
-// My Events
+// ==================== My Events ====================
 export const getMyEvents =
   async () => {
-    const response =
-      await axiosInstance.get(
-        "/events/my-events",
-        getAuthConfig()
-      );
+    try {
+      const response =
+        await axiosInstance.get(
+          "/events/my-events",
+          getAuthConfig()
+        );
 
-    return response.data;
+      return response.data;
+    } catch (error) {
+      throw (
+        error.response?.data || {
+          message:
+            "Failed to fetch events",
+        }
+      );
+    }
   };
 
-// Favorites
+// ==================== Favorites ====================
 export const getFavorites =
   async () => {
-    const response =
-      await axiosInstance.get(
-        "/favorites",
-        getAuthConfig()
-      );
+    try {
+      const response =
+        await axiosInstance.get(
+          "/favorites",
+          getAuthConfig()
+        );
 
-    return response.data;
+      return response.data;
+    } catch (error) {
+      throw (
+        error.response?.data || {
+          message:
+            "Failed to fetch favorites",
+        }
+      );
+    }
   };
 
-// Notifications
+// ==================== Notifications ====================
 export const getNotifications =
   async () => {
-    const response =
-      await axiosInstance.get(
-        "/notifications",
-        getAuthConfig()
-      );
+    try {
+      const response =
+        await axiosInstance.get(
+          "/notifications",
+          getAuthConfig()
+        );
 
-    return response.data;
+      return response.data;
+    } catch (error) {
+      throw (
+        error.response?.data || {
+          message:
+            "Failed to fetch notifications",
+        }
+      );
+    }
   };
 
-// Attendance
+// ==================== Attendance ====================
 export const getAttendance =
   async (studentId) => {
-    const response =
-      await axiosInstance.get(
-        `/attendance/student/${studentId}`,
-        getAuthConfig()
-      );
+    try {
+      const response =
+        await axiosInstance.get(
+          `/attendance/student/${studentId}`,
+          getAuthConfig()
+        );
 
-    return response.data;
+      return response.data;
+    } catch (error) {
+      throw (
+        error.response?.data || {
+          message:
+            "Failed to fetch attendance",
+        }
+      );
+    }
   };

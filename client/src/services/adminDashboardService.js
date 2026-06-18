@@ -7,43 +7,72 @@ const getAuthConfig = () => {
 
   return {
     headers: {
-      Authorization: `Bearer ${user?.token}`,
+      Authorization: user?.token
+        ? `Bearer ${user.token}`
+        : "",
     },
   };
 };
 
-// Buildings
+// ==================== Buildings ====================
 export const getBuildings =
   async () => {
-    const response =
-      await axiosInstance.get(
-        "/buildings",
-        getAuthConfig()
-      );
+    try {
+      const response =
+        await axiosInstance.get(
+          "/buildings",
+          getAuthConfig()
+        );
 
-    return response.data;
+      return response.data;
+    } catch (error) {
+      throw (
+        error.response?.data || {
+          message:
+            "Failed to fetch buildings",
+        }
+      );
+    }
   };
 
-// Events
+// ==================== Events ====================
 export const getEvents =
   async () => {
-    const response =
-      await axiosInstance.get(
-        "/events",
-        getAuthConfig()
-      );
+    try {
+      const response =
+        await axiosInstance.get(
+          "/events",
+          getAuthConfig()
+        );
 
-    return response.data;
+      return response.data;
+    } catch (error) {
+      throw (
+        error.response?.data || {
+          message:
+            "Failed to fetch events",
+        }
+      );
+    }
   };
 
-// Attendance
+// ==================== Attendance ====================
 export const getAttendanceRecords =
   async () => {
-    const response =
-      await axiosInstance.get(
-        "/attendance",
-        getAuthConfig()
-      );
+    try {
+      const response =
+        await axiosInstance.get(
+          "/attendance",
+          getAuthConfig()
+        );
 
-    return response.data;
+      return response.data;
+    } catch (error) {
+      throw (
+        error.response?.data || {
+          message:
+            "Failed to fetch attendance records",
+        }
+      );
+    }
   };

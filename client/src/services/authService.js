@@ -1,27 +1,44 @@
 import axiosInstance from "./axiosInstance";
 
-// Register
+// ==================== Register User ====================
 export const registerUser = async (
   userData
 ) => {
-  const response =
-    await axiosInstance.post(
-      "/auth/register",
-      userData
-    );
+  try {
+    const response =
+      await axiosInstance.post(
+        "/auth/register",
+        userData
+      );
 
-  return response.data;
+    return response.data;
+  } catch (error) {
+    throw (
+      error.response?.data || {
+        message:
+          "Registration failed",
+      }
+    );
+  }
 };
 
-// Login
+// ==================== Login User ====================
 export const loginUser = async (
   userData
 ) => {
-  const response =
-    await axiosInstance.post(
-      "/auth/login",
-      userData
-    );
+  try {
+    const response =
+      await axiosInstance.post(
+        "/auth/login",
+        userData
+      );
 
-  return response.data;
+    return response.data;
+  } catch (error) {
+    throw (
+      error.response?.data || {
+        message: "Login failed",
+      }
+    );
+  }
 };

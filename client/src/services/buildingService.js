@@ -7,18 +7,30 @@ const getAuthConfig = () => {
 
   return {
     headers: {
-      Authorization: `Bearer ${user?.token}`,
+      Authorization: user?.token
+        ? `Bearer ${user.token}`
+        : "",
     },
   };
 };
 
+// ==================== Get Buildings ====================
 export const getBuildings =
   async () => {
-    const response =
-      await axiosInstance.get(
-        "/buildings",
-        getAuthConfig()
-      );
+    try {
+      const response =
+        await axiosInstance.get(
+          "/buildings",
+          getAuthConfig()
+        );
 
-    return response.data;
+      return response.data;
+    } catch (error) {
+      throw (
+        error.response?.data || {
+          message:
+            "Failed to fetch buildings",
+        }
+      );
+    }
   };
