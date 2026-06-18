@@ -1,0 +1,8 @@
+Frontend:
+https://smart-campus-navigation-event-manag.vercel.app/
+
+Backend:
+https://smart-campus-navigation-event-management.onrender.com/
+
+GitHub:
+https://github.com/MohammedSalman7/Smart-Campus-Navigation-Event-Management

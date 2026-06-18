@@ -169,13 +169,13 @@ JWT_SECRET=YourSecretKey
 
 # 🌐 Live Demo
 
-**Frontend:** Coming Soon
+## 🌐 Live Demo
 
-**Backend API:** Coming Soon
+Frontend:
+https://smart-campus-navigation-event-manag.vercel.app/
 
-*(Update these links after deployment on Vercel and Render.)*
-
----
+Backend API:
+https://smart-campus-navigation-event-management.onrender.com/
 
 # 🚀 Future Enhancements
 
